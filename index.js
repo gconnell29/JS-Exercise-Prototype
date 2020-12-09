@@ -95,18 +95,22 @@ Car.prototype.fill = function (gallons) {
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
 
-}
+const Baby = new Person({
+  favoriteToy: 'doll',
+  play: function(favoriteToy) {
+    return `Playing with ${this.favoriteToy}`;
+  }
+});
 
 /* 
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. using "this" outside of an object or constructor function will make it reference the window object
+  2. Whenever a preceding dot calls a function, the object before the dot is "this"
+  3. "this" may refer to a specific instance on a constructor function when that constructor function is being used
+  4. using.call or .apply method, "this" is explicityl defined
 */
 
 
